@@ -1,8 +1,8 @@
 //子组件
 <template>
   <!--  <p>子</p>-->
-  <button @click="butFn">改变page值:</button>
-  {{ page }}
+  <button @click="butFn">改变page值: {{ page }} </button>
+
 </template>
 
 
@@ -37,6 +37,7 @@ defineExpose({ doSth });
 
 // 获取父组件传递过来的数据
 console.log(props.page, "parent value"); // parent value
+
 </script>
 <style scoped>
 button {

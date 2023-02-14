@@ -20,9 +20,8 @@ const pageFn = (num) => {
 }
 
 function doSth1() {
-
+  console.log(childRef.value)
   childRef.value.doSth();
-
 }
 </script>
 <style scoped>

@@ -38,5 +38,10 @@ div {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
 }
 </style>

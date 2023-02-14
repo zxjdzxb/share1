@@ -1,10 +1,11 @@
 <template>
-
-  <div class="father">{{ fatherRef }}</div>
-
-  <UseSlots :fatherRef="fatherRef" @changeVal="changeVal" class="btn" id="111">
-    <template #test1>
-      <div>插槽的值1223</div>
+  <UseSlots :fatherRef="fatherRef" @changeVal="changeVal"
+            :arrs="['foo', 'bar']"
+            :obj="{ foo: 'bar' }"
+            data-hash="b10a8db164e0754105b7a99be72e3fe5"
+            class="btn" id="111">
+    <template #aaa>
+      <div class="child">插槽的值1223</div>
     </template>
   </UseSlots>
 
@@ -20,7 +21,6 @@ const fatherRef = ref("1");
 
 function changeVal(val) {
   fatherRef.value = val;
-
 }
 
 </script>
@@ -41,9 +41,11 @@ div{
 .btn {
 
   font-size: 20px;
-
   color: red;
 
+}
+.child{
+  margin: 10px;
 }
 
 </style>
